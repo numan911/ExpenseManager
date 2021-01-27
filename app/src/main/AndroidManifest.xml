@@ -9,13 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpenseManager">
-        <activity android:name=".UI.UpdateExpenseActivity"
-            android:label="Update Expense">
+        <activity android:name="SplashScreen.SplashScreen"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".UI.AddExpenseActivity"
-            android:label="Add Expense"/>
-        <activity android:name=".UI.AllExpensesActivity"
-            android:label="All Expenses"/>
+        <activity
+            android:name=".UI.UpdateExpenseActivity"
+            android:label="Update Expense">
+
+        </activity>
+        <activity
+            android:name=".UI.AddExpenseActivity"
+            android:label="Add Expense" />
+        <activity
+            android:name=".UI.AllExpensesActivity"
+            android:label="All Expenses" />
         <activity android:name=".UI.ForgotPasswordActivity" />
         <activity android:name=".UI.SignUpActivity" />
         <activity android:name=".UI.SignInActivity">
