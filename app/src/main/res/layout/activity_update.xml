@@ -4,38 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.UpdateExpenseActivity"
-    android:background="#19678b">
+    android:background="#19678b"
+    tools:context=".UI.UpdateExpenseActivity">
+
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expense Title:"
         android:layout_margin="10dp"
-        android:textSize="18sp"
+        android:text="Expense Title:"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:layout_below="@+id/text_title"
         android:id="@+id/expenseTitle"
         android:layout_width="match_parent"
         android:layout_height="40dp"
+        android:layout_below="@+id/text_title"
         android:layout_margin="10dp"
         android:background="@drawable/btn_back"
         android:elevation="10dp"
         android:inputType="text"
         android:padding="10dp" />
+
     <TextView
-        android:layout_below="@id/expenseTitle"
         android:id="@+id/text_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Expense Description:"
+        android:layout_below="@id/expenseTitle"
         android:layout_margin="10dp"
-        android:textSize="18sp"
+        android:text="Expense Description:"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/expenseDescription"
@@ -67,9 +69,9 @@
         android:layout_marginLeft="20dp"
         android:background="@drawable/btn_back"
         android:elevation="10dp"
-        android:textColor="@color/black"
         android:padding="5dp"
         android:text="22/1/2021"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
     <TextView
@@ -82,8 +84,8 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="20dp"
         android:text="Amount:"
-        android:textSize="18sp"
         android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
@@ -93,10 +95,10 @@
         android:layout_below="@+id/amountText"
         android:layout_alignParentRight="true"
         android:layout_marginRight="30dp"
-        android:gravity="center"
         android:background="@drawable/btn_back"
         android:drawableLeft="@drawable/ic_baseline_attach_money_24"
         android:elevation="10dp"
+        android:gravity="center"
         android:inputType="number"
         android:padding="2dp"
         android:textSize="20sp" />

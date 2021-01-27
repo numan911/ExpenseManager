@@ -28,6 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

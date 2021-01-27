@@ -21,22 +21,23 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignInActivity extends AppCompatActivity {
-    TextView signUp,forgotPassword;
-    EditText userEmail,userPassword;
+    TextView signUp, forgotPassword;
+    EditText userEmail, userPassword;
     Button logIn;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
-        userEmail =findViewById(R.id.userEmail);
+        userEmail = findViewById(R.id.userEmail);
         userPassword = findViewById(R.id.userPassword);
-        fAuth =FirebaseAuth.getInstance();
+        fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progress);
         logIn = findViewById(R.id.loginBtn);
-        forgotPassword =findViewById(R.id.forgotPassword);
+        forgotPassword = findViewById(R.id.forgotPassword);
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,7 +66,7 @@ public class SignInActivity extends AppCompatActivity {
                     userPassword.requestFocus();
                 }
                 progressBar.setVisibility(View.VISIBLE);
-                fAuth.signInWithEmailAndPassword(email,password)
+                fAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -79,7 +80,6 @@ public class SignInActivity extends AppCompatActivity {
                         });
 
 
-
             }
         });
 
@@ -91,11 +91,12 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     protected void onStart() {
         super.onStart();
         FirebaseUser user = fAuth.getCurrentUser();
-        if (user!=null){
+        if (user != null) {
             startActivity(new Intent(SignInActivity.this, AllExpensesActivity.class));
         }
         forgotPassword.setOnClickListener(new View.OnClickListener() {

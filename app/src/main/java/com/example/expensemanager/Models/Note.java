@@ -5,11 +5,12 @@ public class Note {
     private String description;
     private String amount;
     private String date;
+
     public Note() {
         //public no-arg constructor needed
     }
 
-    public Note(String title, String description, String amount,String date) {
+    public Note(String title, String description, String amount, String date) {
         this.title = title;
         this.description = description;
         this.amount = amount;
