@@ -99,6 +99,8 @@
         android:drawableLeft="@drawable/ic_baseline_attach_money_24"
         android:elevation="10dp"
         android:gravity="center"
+        android:maxLines="1"
+        android:maxLength="8"
         android:inputType="number"
         android:padding="2dp"
         android:textSize="20sp" />

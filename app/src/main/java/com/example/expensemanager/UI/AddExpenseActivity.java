@@ -44,7 +44,7 @@ public class AddExpenseActivity extends AppCompatActivity {
         expenseDate = findViewById(R.id.expenseDate);
         addExpense = findViewById(R.id.addExpense);
 
-
+// Calendar setup
         expenseDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,6 +71,8 @@ public class AddExpenseActivity extends AppCompatActivity {
                 expenseDate.setText(date);
             }
         };
+
+        // add expense
         addExpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +85,8 @@ public class AddExpenseActivity extends AppCompatActivity {
                     expenseTitle.requestFocus();
                     return;
                 }
-//                CollectionReference expenseRef = fStore.collection("expenses/" + );
+
+                //save to firebase
                 Note note = new Note(title, description, amount, date);
                 fStore.collection("users")
                         .document(user)

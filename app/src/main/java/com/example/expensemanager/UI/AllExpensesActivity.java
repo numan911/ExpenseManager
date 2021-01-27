@@ -50,6 +50,7 @@ public class AllExpensesActivity extends AppCompatActivity {
         });
     }
 
+    // recyclerview setting
     private void setUpRecyclerView() {
         Query query = notebookRef.orderBy("date", Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<Note> options = new FirestoreRecyclerOptions.Builder<Note>()
@@ -61,6 +62,7 @@ public class AllExpensesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
+        // swipe deleting
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
                 ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
@@ -75,6 +77,7 @@ public class AllExpensesActivity extends AppCompatActivity {
         }).attachToRecyclerView(recyclerView);
     }
 
+    // onStart load all expenses
     @Override
     protected void onStart() {
         super.onStart();
@@ -87,6 +90,7 @@ public class AllExpensesActivity extends AppCompatActivity {
         adapter.stopListening();
     }
 
+    // menu option of logOut and reset password
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

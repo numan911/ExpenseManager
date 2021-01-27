@@ -41,6 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         userPassword = findViewById(R.id.userPassword);
         signup_btn = findViewById(R.id.signup_btn);
+        // creating user using email and password
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

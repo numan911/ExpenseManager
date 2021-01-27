@@ -42,6 +42,7 @@ public class UpdateExpenseActivity extends AppCompatActivity {
         updateExpense = findViewById(R.id.addExpense);
 
 
+        //calendar setting
         expenseDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +70,7 @@ public class UpdateExpenseActivity extends AppCompatActivity {
             }
         };
 
+        // getting data of user using adapter
         Intent data = getIntent();
 
         expenseTitle.setText(data.getStringExtra("title"));

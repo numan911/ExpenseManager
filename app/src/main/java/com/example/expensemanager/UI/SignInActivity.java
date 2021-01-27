@@ -38,6 +38,8 @@ public class SignInActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress);
         logIn = findViewById(R.id.loginBtn);
         forgotPassword = findViewById(R.id.forgotPassword);
+
+        // login by using email and password
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +85,7 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        //   click to signup activity
         signUp = findViewById(R.id.signUp);
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +95,7 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
 
+    // start application from user specific expense list f logged in
     @Override
     protected void onStart() {
         super.onStart();
@@ -99,6 +103,7 @@ public class SignInActivity extends AppCompatActivity {
         if (user != null) {
             startActivity(new Intent(SignInActivity.this, AllExpensesActivity.class));
         }
+        // click to forgot activity
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
