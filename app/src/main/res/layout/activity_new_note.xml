@@ -69,6 +69,7 @@
         android:layout_marginLeft="20dp"
         android:background="@drawable/btn_back"
         android:elevation="10dp"
+        android:textColor="@color/black"
         android:padding="5dp"
         android:text="22/1/2021"
         android:textSize="20sp" />
