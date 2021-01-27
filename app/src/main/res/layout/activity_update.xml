@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.UpdateExpenseActivity"
+    android:background="#19678b">
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense Title:"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_below="@+id/text_title"
+        android:id="@+id/expenseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_back"
+        android:elevation="10dp"
+        android:inputType="text"
+        android:padding="10dp" />
+    <TextView
+        android:layout_below="@id/expenseTitle"
+        android:id="@+id/text_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense Description:"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/expenseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/text_desc"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_back"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expenseDescription"
+        android:layout_margin="20dp"
+        android:text="Select Date:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/expenseDate"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dateText"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/btn_back"
+        android:elevation="10dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:text="22/1/2021"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expenseDescription"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="Amount:"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/expenseAmount"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/amountText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:background="@drawable/btn_back"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:elevation="10dp"
+        android:inputType="number"
+        android:padding="2dp"
+        android:textSize="20sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:elevation="50dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:backgroundTint="#ffff" />
+
+</RelativeLayout>
