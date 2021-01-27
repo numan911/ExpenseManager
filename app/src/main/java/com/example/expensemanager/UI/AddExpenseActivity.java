@@ -92,7 +92,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
-                                Toast.makeText(AddExpenseActivity.this, "Data Saved!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AddExpenseActivity.this, "Expense Saved!", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(AddExpenseActivity.this, AllExpensesActivity.class));
                             }
                         })
