@@ -85,7 +85,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                 }
 //                CollectionReference expenseRef = fStore.collection("expenses/" + );
                 Note note = new Note(title, description, amount, date);
-                fStore.collection("users" )
+                fStore.collection("users")
                         .document(user)
                         .collection("expenses")
                         .add(note)

@@ -28,10 +28,11 @@ public class AllExpensesActivity extends AppCompatActivity {
     FloatingActionButton fab;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference notebookRef = db.collection("users")
-            .document( FirebaseAuth.getInstance().getCurrentUser().getUid())
+            .document(FirebaseAuth.getInstance().getCurrentUser().getUid())
             .collection("expenses");
 
     private expenseAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,13 +90,13 @@ public class AllExpensesActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_option,menu);
+        inflater.inflate(R.menu.menu_option, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.LogOut:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(AllExpensesActivity.this, SignInActivity.class));

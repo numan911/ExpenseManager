@@ -22,6 +22,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     Button reset;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +52,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                 fAuth.sendPasswordResetEmail(Email).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             Toast.makeText(ForgotPasswordActivity.this, "Check Your Email to Reset Password", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
-                        }else {
+                        } else {
                             Toast.makeText(ForgotPasswordActivity.this, "Something went wrong! Try Again", Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
